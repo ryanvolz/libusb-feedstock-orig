@@ -1,0 +1,35 @@
+{% set name = "libusb" %}
+{% set version = "1.0.21" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: 'https://github.com/libusb/libusb/releases/download/v{{ version}}/{{ name }}-{{ version }}.tar.bz2'
+  sha256: 7dce9cce9a81194b7065ee912bcd55eeffebab694ea403ffb91b67db66b1824b
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: True
+
+requirements:
+  build:
+    - toolchain
+    - automake
+    - libtool
+
+about:
+  home: http://libusb.info/
+  license: LGPL-2.1
+  license_file: COPYING
+  summary: 'A cross-platform library to access USB devices'
+  description: |
+    libusb is a library for USB device access from Linux, Mac OS X, Windows,
+    OpenBSD/NetBSD and Haiku userspace.
+  doc_url: http://api.libusb.info/
+  dev_url: https://github.com/libusb/libusb
+
+extra:
+  recipe-maintainers:
+    - ryanvolz
