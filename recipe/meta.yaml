@@ -21,7 +21,7 @@ requirements:
     - libtool
 
 test:
-  command:
+  commands:
     {% set libusb_lib = "libusb-1.0" %}
     - test -f $PREFIX/lib/{{ libusb_lib }}.a  # [unix]
     - test -f $PREFIX/lib/{{ libusb_lib }}.so  # [linux]
