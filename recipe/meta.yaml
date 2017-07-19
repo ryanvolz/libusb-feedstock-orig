@@ -20,6 +20,14 @@ requirements:
     - automake
     - libtool
 
+test:
+  command:
+    {% set libusb_lib = "libusb-1.0" %}
+    - test -f $PREFIX/lib/{{ libusb_lib }}.a  # [unix]
+    - test -f $PREFIX/lib/{{ libusb_lib }}.so  # [linux]
+    - test -f $PREFIX/lib/{{ libusb_lib }}.dylib  # [osx]
+    - otool -L $PREFIX/lib/{{ libusb_lib }}.dylib  # [osx]
+
 about:
   home: http://libusb.info/
   license: LGPL-2.1
