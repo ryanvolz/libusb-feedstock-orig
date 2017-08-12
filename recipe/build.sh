@@ -6,7 +6,7 @@ CXXFLAGS="${CXXFLAGS} -D_GLIBCXX_USE_CXX11_ABI=0"
 
 mkdir build
 cd build
-../configure --prefix=${PREFIX} --disable-udev
+../configure --prefix=${PREFIX} --disable-udev --enable-tests-build
 make
-make check
+tests/stress
 make install
