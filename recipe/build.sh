@@ -8,5 +8,5 @@ mkdir build
 cd build
 ../configure --prefix=${PREFIX} --disable-udev --enable-tests-build
 make
-tests/stress
+LIBUSB_DEBUG=9 tests/stress
 make install
