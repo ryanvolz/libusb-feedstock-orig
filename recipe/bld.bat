@@ -8,9 +8,9 @@ if "%ARCH%" == "32" (
 )
 
 if "%VS_YEAR%" == "2008" (
-  copy msvc\libusb_2005.sln msvc\libusb_2008.sln
-  call devenv /Upgrade msvc\libusb_2008.sln
-  set SLN_FILE="msvc\libusb_2008.sln"
+  call devenv /upgrade msvc\libusb_2005.sln
+  if errorlevel 1 exit 1
+  set SLN_FILE="msvc\libusb_2005.sln"
 )
 if "%VS_YEAR%" == "2010" (
   set SLN_FILE="msvc\libusb_2010.sln"
@@ -27,11 +27,12 @@ msbuild "%SLN_FILE%" ^
 if errorlevel 1 exit 1
 
 :: Install
-copy %SRC_DIR%\msvc\%SLN_PLAT%\Release\dll\libusb-1.0.dll %LIBRARY_BIN%\usb-1.0.dll
+copy %SRC_DIR%\%SLN_PLAT%\Release\dll\libusb-1.0.dll %LIBRARY_BIN%\usb-1.0.dll
 if errorlevel 1 exit 1
-copy %SRC_DIR%\msvc\%SLN_PLAT%\Release\dll\libusb-1.0.lib %LIBRARY_LIB%\usb-1.0.lib
+copy %SRC_DIR%\%SLN_PLAT%\Release\dll\libusb-1.0.lib %LIBRARY_LIB%\usb-1.0.lib
 if errorlevel 1 exit 1
-copy %SRC_DIR%\msvc\%SLN_PLAT%\Release\lib\libusb-1.0.lib %LIBRARY_LIB%\
+copy %SRC_DIR%\%SLN_PLAT%\Release\lib\libusb-1.0.lib %LIBRARY_LIB%\
 if errorlevel 1 exit 1
+mkdir %LIBRARY_INC%\libusb-1.0
 copy %SRC_DIR%\libusb\libusb.h %LIBRARY_INC%\libusb-1.0\
 if errorlevel 1 exit 1
