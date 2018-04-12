@@ -36,8 +36,7 @@ if "%VS_YEAR%" == "2010" (
 )
 if "%VS_YEAR%" == "2015" (
   set SLN_FILE="msvc\libusb_2015.sln"
-  set TOOLSET=v140
-  set TOOLSVERSION=4.6
+  set TOOLSVERSION=14.0
 )
 
 :: Build
