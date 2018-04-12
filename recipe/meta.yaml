@@ -1,5 +1,5 @@
 {% set name = "libusb" %}
-{% set version = "1.0.21" %}
+{% set version = "1.0.22" %}
 
 package:
   name: {{ name }}
@@ -7,26 +7,42 @@ package:
 
 source:
   url: 'https://github.com/libusb/libusb/releases/download/v{{ version}}/{{ name }}-{{ version }}.tar.bz2'
-  sha256: 7dce9cce9a81194b7065ee912bcd55eeffebab694ea403ffb91b67db66b1824b
+  sha256: 75aeb9d59a4fdb800d329a545c2e6799f732362193b465ea198f2aa275518157
 
 build:
-  number: 2
-  skip: True  # [win]
+  number: 0
   detect_binary_files_with_prefix: True
+  features:
+    - vc9  # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and py>=35]
 
 requirements:
   build:
-    - toolchain
     - automake
     - libtool
+    - python  # [win]
+    - toolchain
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
+
+  run:
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
 
 test:
   commands:
-    {% set libusb_lib = "libusb-1.0" %}
-    - test -f $PREFIX/lib/{{ libusb_lib }}.a  # [unix]
-    - test -f $PREFIX/lib/{{ libusb_lib }}.so  # [linux]
-    - test -f $PREFIX/lib/{{ libusb_lib }}.dylib  # [osx]
-    - otool -L $PREFIX/lib/{{ libusb_lib }}.dylib  # [osx]
+    - test -f $PREFIX/include/libusb-1.0/libusb.h  # [unix]
+    - test -f $PREFIX/lib/libusb-1.0.a  # [unix]
+    - test -f $PREFIX/lib/libusb-1.0${SHLIB_EXT}  # [unix]
+    - if not exist %PREFIX%\\Library\\bin\\usb-1.0.dll exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\usb-1.0.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\libusb-1.0.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\include\\libusb-1.0\\libusb.h exit 1  # [win]
+    - conda inspect linkages -p $PREFIX libusb  # [not win]
+    - conda inspect objects -p $PREFIX libusb  # [osx]
 
 about:
   home: http://libusb.info/
