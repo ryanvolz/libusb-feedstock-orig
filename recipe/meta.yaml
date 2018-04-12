@@ -19,8 +19,8 @@ build:
 
 requirements:
   build:
-    - automake
-    - libtool
+    - automake  # [unix]
+    - libtool  # [unix]
     - python  # [win]
     - toolchain
     - vc 9  # [win and py27]
