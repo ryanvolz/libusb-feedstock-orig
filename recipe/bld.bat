@@ -19,18 +19,22 @@ if "%VS_YEAR%" == "2008" (
   call vcbuild /upgrade msvc\xusb_2005.vcproj
   if errorlevel 1 exit 1
   set SLN_FILE="msvc\libusb_2005.sln"
+  set TOOLSET=v90
 )
 if "%VS_YEAR%" == "2010" (
   set SLN_FILE="msvc\libusb_2010.sln"
+  set TOOLSET=v100
 )
 if "%VS_YEAR%" == "2015" (
   set SLN_FILE="msvc\libusb_2015.sln"
+  set TOOLSET=v140
 )
 
 :: Build
 msbuild "%SLN_FILE%" ^
   /p:Configuration="Release" ^
   /p:Platform="%SLN_PLAT%" ^
+  /p:PlatformToolset="%TOOLSET%" ^
   /verbosity:normal
 if errorlevel 1 exit 1
 
