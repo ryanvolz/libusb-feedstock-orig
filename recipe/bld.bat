@@ -14,6 +14,8 @@ if "%ARCH%" == "32" (
 if %VS_MAJOR% == 9 (
     COPY C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe .\
     set "PATH=%CD%;%PATH%"
+    :: workaround for msbuild 4.0 bug for VC 2008 projects targeting x64
+    set VC_PROJECT_ENGINE_NOT_USING_REGISTRY_FOR_INIT=1
 )
 
 if "%VS_YEAR%" == "2008" (
