@@ -20,14 +20,17 @@ if "%VS_YEAR%" == "2008" (
   if errorlevel 1 exit 1
   set SLN_FILE="msvc\libusb_2005.sln"
   set TOOLSET=v90
+  set FRAMEWORK=3.5
 )
 if "%VS_YEAR%" == "2010" (
   set SLN_FILE="msvc\libusb_2010.sln"
   set TOOLSET=v100
+  set FRAMEWORK=4
 )
 if "%VS_YEAR%" == "2015" (
   set SLN_FILE="msvc\libusb_2015.sln"
   set TOOLSET=v140
+  set FRAMEWORK=4.5
 )
 
 :: Build
@@ -35,6 +38,7 @@ msbuild "%SLN_FILE%" ^
   /p:Configuration="Release" ^
   /p:Platform="%SLN_PLAT%" ^
   /p:PlatformToolset="%TOOLSET%" ^
+  /p:TargetFrameworkVersion="%FRAMEWORK%" ^
   /verbosity:normal
 if errorlevel 1 exit 1
 
