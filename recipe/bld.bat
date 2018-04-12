@@ -8,7 +8,7 @@ if "%ARCH%" == "32" (
 )
 
 if "%VS_YEAR%" == "2008" (
-  call devenv /upgrade msvc\libusb_2005.sln
+  call "%VS90COMNTOOLS"\\..\\IDE\\vcexpress /upgrade msvc\libusb_2005.sln
   if errorlevel 1 exit 1
   set SLN_FILE="msvc\libusb_2005.sln"
 )
