@@ -8,7 +8,9 @@ if "%ARCH%" == "32" (
 )
 
 if "%VS_YEAR%" == "2008" (
-  set SLN_FILE="msvc\libusb_2005.sln"
+  copy msvc\libusb_2005.sln msvc\libusb_2008.sln
+  call devenv /Upgrade msvc\libusb_2008.sln
+  set SLN_FILE="msvc\libusb_2008.sln"
 )
 if "%VS_YEAR%" == "2010" (
   set SLN_FILE="msvc\libusb_2010.sln"
