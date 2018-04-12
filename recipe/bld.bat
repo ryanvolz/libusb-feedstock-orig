@@ -12,6 +12,12 @@ if "%VS_YEAR%" == "2008" (
   if errorlevel 1 exit 1
   call vcbuild /upgrade msvc\libusb_static_2005.vcproj
   if errorlevel 1 exit 1
+  call vcbuild /upgrade msvc\listdevs_2005.vcproj
+  if errorlevel 1 exit 1
+  call vcbuild /upgrade msvc\stress_2005.vcproj
+  if errorlevel 1 exit 1
+  call vcbuild /upgrade msvc\xusb_2005.vcproj
+  if errorlevel 1 exit 1
   set SLN_FILE="msvc\libusb_2005.sln"
 )
 if "%VS_YEAR%" == "2010" (
