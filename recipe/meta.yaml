@@ -10,7 +10,8 @@ source:
   sha256: 75aeb9d59a4fdb800d329a545c2e6799f732362193b465ea198f2aa275518157
 
 build:
-  number: 0
+  number: 1
+  skip: True  # [win and py35]
   detect_binary_files_with_prefix: True
   features:
     - vc9  # [win and py27]
@@ -39,6 +40,7 @@ test:
     - test -f $PREFIX/lib/libusb-1.0${SHLIB_EXT}  # [unix]
     - if not exist %PREFIX%\\Library\\bin\\usb-1.0.dll exit 1  # [win]
     - if not exist %PREFIX%\\Library\\lib\\usb-1.0.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\usb-1.0.pdb exit 1  # [win]
     - if not exist %PREFIX%\\Library\\lib\\libusb-1.0.lib exit 1  # [win]
     - if not exist %PREFIX%\\Library\\include\\libusb-1.0\\libusb.h exit 1  # [win]
     - conda inspect linkages -p $PREFIX libusb  # [not win]

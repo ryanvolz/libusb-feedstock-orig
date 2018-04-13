@@ -54,6 +54,8 @@ copy %SRC_DIR%\%SLN_PLAT%\Release\dll\libusb-1.0.dll %LIBRARY_BIN%\usb-1.0.dll
 if errorlevel 1 exit 1
 copy %SRC_DIR%\%SLN_PLAT%\Release\dll\libusb-1.0.lib %LIBRARY_LIB%\usb-1.0.lib
 if errorlevel 1 exit 1
+copy %SRC_DIR%\%SLN_PLAT%\Release\dll\libusb-1.0.pdb %LIBRARY_LIB%\usb-1.0.pdb
+if errorlevel 1 exit 1
 copy %SRC_DIR%\%SLN_PLAT%\Release\lib\libusb-1.0.lib %LIBRARY_LIB%\
 if errorlevel 1 exit 1
 mkdir %LIBRARY_INC%\libusb-1.0
