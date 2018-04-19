@@ -16,14 +16,16 @@ OpenBSD/NetBSD and Haiku userspace.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/ryanvolz/libusb-feedstock.svg?style=shield)](https://circleci.com/gh/ryanvolz/libusb-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/ryanvolz/libusb-feedstock.svg?branch=master)](https://travis-ci.org/ryanvolz/libusb-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/ryanvolz/libusb-feedstock?svg=True)](https://ci.appveyor.com/project/ryanvolz/libusb-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/ryanvolz/libusb-feedstock/master.svg?label=Linux)](https://circleci.com/gh/ryanvolz/libusb-feedstock)
+[![OSX](https://img.shields.io/travis/ryanvolz/libusb-feedstock/master.svg?label=macOS)](https://travis-ci.org/ryanvolz/libusb-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/ryanvolz/libusb-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/ryanvolz/libusb-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/ryanvolz/libusb/badges/version.svg)](https://anaconda.org/ryanvolz/libusb)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/ryanvolz/libusb/badges/downloads.svg)](https://anaconda.org/ryanvolz/libusb)
+[![Conda Recipe](https://img.shields.io/badge/recipe-libusb-green.svg)](https://anaconda.org/ryanvolz/libusb)
+[![Conda Downloads](https://img.shields.io/conda/dn/ryanvolz/libusb.svg)](https://anaconda.org/ryanvolz/libusb)
+[![Conda Version](https://img.shields.io/conda/vn/ryanvolz/libusb.svg)](https://anaconda.org/ryanvolz/libusb)
+[![Conda Platforms](https://img.shields.io/conda/pn/ryanvolz/libusb.svg)](https://anaconda.org/ryanvolz/libusb)
 
 Installing libusb
 =================
