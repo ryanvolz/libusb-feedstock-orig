@@ -22,10 +22,10 @@ Current build status
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-libusb-green.svg)](https://anaconda.org/ryanvolz/libusb)
-[![Conda Downloads](https://img.shields.io/conda/dn/ryanvolz/libusb.svg)](https://anaconda.org/ryanvolz/libusb)
-[![Conda Version](https://img.shields.io/conda/vn/ryanvolz/libusb.svg)](https://anaconda.org/ryanvolz/libusb)
-[![Conda Platforms](https://img.shields.io/conda/pn/ryanvolz/libusb.svg)](https://anaconda.org/ryanvolz/libusb)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libusb-green.svg)](https://anaconda.org/ryanvolz/libusb) | [![Conda Downloads](https://img.shields.io/conda/dn/ryanvolz/libusb.svg)](https://anaconda.org/ryanvolz/libusb) | [![Conda Version](https://img.shields.io/conda/vn/ryanvolz/libusb.svg)](https://anaconda.org/ryanvolz/libusb) | [![Conda Platforms](https://img.shields.io/conda/pn/ryanvolz/libusb.svg)](https://anaconda.org/ryanvolz/libusb) |
 
 Installing libusb
 =================

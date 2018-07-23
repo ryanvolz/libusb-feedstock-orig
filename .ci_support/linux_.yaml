@@ -1,4 +1,4 @@
 c_compiler:
-- gcc
+- toolchain_c
 cxx_compiler:
-- gxx
+- toolchain_cxx
