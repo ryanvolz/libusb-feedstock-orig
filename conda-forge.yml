@@ -9,3 +9,5 @@ travis:
 appveyor:
   secure:
     BINSTAR_TOKEN: 71TfwwHlSXL1lpYe3qfRuCAgxnXZkZw1a89oCIgAz4T+pKtbztMaAfWiC4oMSy2B
+azure:
+  user_or_org: rvolz
