@@ -18,6 +18,20 @@ Current build status
 
 
 <table><tr>
+    <td>CircleCI</td>
+    <td>
+      <a href="https://circleci.com/gh/ryanvolz/libusb-feedstock">
+        <img alt="Linux" src="https://img.shields.io/circleci/project/github/ryanvolz/libusb-feedstock/master.svg?label=Linux">
+      </a>
+    </td>
+  </tr><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://travis-ci.org/ryanvolz/libusb-feedstock">
+        <img alt="macOS" src="https://img.shields.io/travis/ryanvolz/libusb-feedstock/master.svg?label=macOS">
+      </a>
+    </td>
+  </tr><tr>
     <td>Appveyor</td>
     <td>
       <a href="https://ci.appveyor.com/project/ryanvolz/libusb-feedstock/branch/master">
