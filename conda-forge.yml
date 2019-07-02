@@ -5,9 +5,9 @@ channels:
 github:
   user_or_org: ryanvolz
 provider:
-  linux: circle
-  osx: travis
-  win: appveyor
+  linux: azure
+  osx: azure
+  win: azure
 travis:
   secure:
     BINSTAR_TOKEN: Kvljq5QzAaKyaxp3dtrPnnppgUhQiqXyjgZGcbF9eFDL/N2WsBj8/2h954CRiYbGbD0H1xdIKWXoNSSgrvFSJfep9jylD5um+/c2wzsEga9vKhBIx8l9ZI1L+kKZUNRAgNOQSy6DPsNdyztBJnWyFyyCGP9t+D4xtWRTvAP8cJ9DggxuY6JJ1/T6I0n6zBu9PnZbOuhZ6cS2J/coShAkW55X+eeeaqZPUzPVB/3HwuzbGpin7QLX5LKiufAr8b41ldoyCODhY6MxnHH8KFAesY/JCELkhyImeVIsOmUqBuQd6wrN+RLK4pDKwXroQOcmHBvJ44GXi+lRZCV7II8A13EYCAa5SVUqXBNShj2b1kmuRNV7qX3wTUa05xEc0nCDudjhyCFp6jVjsJfQCw49deRkbYGH/3gE4XqKIR+2uhX/9VwP6MFk7UF7hTZHh39Fxo2FZYoM9RRGF7hkasb3NVnRDL2iiFVgaQEN+1FDZYymvxZsy7ED26YWWjyssEXuVSqnqTmOtBJRUu8x0fVnrjg6Y/zuSky3mKiG9GOUvy7TsK8Xjvj4kGSPLqRtCI7JdyQKudhVW9R66MtBvEXh/weNwjHAxQr4fDvp5OvBaejd0rc+wtOFPD2BBA1gLUIpQHvYm+wl19RZREZj/B2YtFQuQZayVkrGKE0AOBBKanA=
