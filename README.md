@@ -17,7 +17,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Appveyor</td>
+    <td>
+      <a href="https://ci.appveyor.com/project/ryanvolz/libusb-feedstock/branch/master">
+        <img alt="windows" src="https://img.shields.io/appveyor/ci/ryanvolz/libusb-feedstock/master.svg?label=Windows">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
