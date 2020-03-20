@@ -10,7 +10,7 @@ source:
   sha256: db11c06e958a82dac52cf3c65cb4dd2c3f339c8a988665110e0d24d19312ad8d
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libusb') }}
 
