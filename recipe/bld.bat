@@ -31,6 +31,21 @@ if not exist "%MSBUILD_CMD%" (
   for /f "usebackq tokens=*" %%i in (`"!VSWHERE_CMD!" -latest -products * -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe`) do (
     set "MSBUILD_CMD=%%i"
   )
+  if not exist "!MSBUILD_CMD!" (
+    :: try just finding the VS 2017 installation path
+    for /f "usebackq tokens=*" %%i in (`"!VSWHERE_CMD!" -latest -products * -requires Microsoft.Component.MSBuild -version ^[15.0^,16.0^) -property installationPath`) do (
+      set "vsdir=%%i"
+    )
+    set "MSBUILD_CMD=!vsdir!\MSBuild\15.0\Bin\MSBuild.exe"
+    if not exist "!MSBUILD_CMD!" (
+      :: try a sensible default
+      set "MSBUILD_CMD=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe"
+      if not exist "!MSBUILD_CMD!" (
+        echo Could not find MSBuild.exe
+        exit 1
+      )
+    )
+  )
   echo MSBuild path: !MSBUILD_CMD!
 )
 
